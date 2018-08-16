@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Basic Grid System</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+    <!-- Custom CSS -->
+    <!-- <link href="nav2.css" rel="stylesheet"> -->
+<!-- fontawesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+
+<style>
+    #accordion {
+        padding-top: 5px;
+    }
+    .accordion .card-header:after {
+        font-family: 'FontAwesome';
+        content: "\f0f8";
+        float: right;
+    }
+
+    .accordion .card-header.collapsed:after {
+        /* symbol for "collapsed" panel */
+        content: "\f067";
+    }
+
+    .vote .media-body {
+        padding-top: 25px;
+    }
+    .blue-text {
+        color: blue;
+        /* color: yellow; */
+        
+    }
+    .gray-text {
+        color: gray;
+    }
+    .originalWord {
+        padding-top: 1px !important;
+        padding-bottom: 1px !important;
+    }
+    .originalWord h3,p {
+        margin-bottom: 0 !important;
+    
+    }
+
+    .originalWord .btn {
+        border: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* .originalWord .media-body {
+        text-align: center;
+    } */
+
+</style>
+
+</head>
+<body>
+
+    <div class="container">
+
+
+        <div id="accordion" class="col-">
+            <!-- Level one - cleate a card for each "Original word" -->
+            <h1>New Words</h1>
+            <div class="card">
+
+                <div class="card-header originalWord" id="headingOne">
+                    <div  class="mb-0 float-left col-sm-12 col-md-8">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <h3 class="float-left">Lesbian</h3> <br>
+                         </button>
+                    </div>
+                    <div class="media float-left col-sm-12 col-md-4">
+                        <div class="media-body">
+                            <p>2 words / 8 comments</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- level Two - create a {nested-card-} for the new "word" related to the "Original word"-->
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <!-- nested child div -->
+                    <div class="card-body" id="child1">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="col-sm-12  float-left">
+                                    <a href="#" data-toggle="collapse" data-target="#collapseOneA">Word 1</a>
+                                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.</p>
+                                </div>
+                                
+                                <div class="col-sm-12 media float-left vote">
+                                    <div class="media-body">
+                                         <!--Review-->
+                                        <i class="fa fa-star blue-text "> </i>
+                                        <i class="fa fa-star blue-text "> </i>
+                                        <i class="fa fa-star blue-text "> </i>
+                                        <i class="fa fa-star blue-text "> </i>
+                                        <i class="fa fa-star gray-text "> </i>
+                                        <p>Vote for this word</p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of word 1 -->
+                    <div class="card-body" id="child1">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="col-sm-12  float-left">
+                                    <a href="#" data-toggle="collapse" data-target="#collapseOneA">Word 2</a>
+                                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.</p>
+                                </div>
+                                    
+                                <div class="col-sm-12 media float-left vote">
+                                    <div class="media-body">
+                                        <!--Review-->
+                                        <i class="fa fa-star blue-text "> </i>
+                                        <i class="fa fa-star blue-text "> </i>
+                                        <i class="fa fa-star gray-text "> </i>
+                                        <i class="fa fa-star gray-text "> </i>
+                                        <i class="fa fa-star gray-text "> </i>
+                                        <p>Vote for this word</p>
+                                            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of Original word-1 collaps -->
+
+
+            </div>
+            <!-- end of Card -->
+            <div class="card">
+
+                    <div class="card-header originalWord" id="headingTwo">
+                        <div  class="mb-0 float-left col-sm-6 col-md-8">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <h3 class="float-left">Gay</h3> <br>
+                             </button>
+                        </div>
+                        <div class="media float-left col-sm-6 col-md-4">
+                            <div class="media-body">
+                                <p>3 words / 5 comments</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- level Two - create a {nested-card-} for the new "word" related to the "Original word"-->
+                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <!-- nested child div -->
+                        <div class="card-body" id="child2">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="col-sm-12 col-md-8  float-left">
+                                        <a href="#" data-toggle="collapse" data-target="#collapseOneB">Word 1</a>
+                                        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.</p>
+                                    </div>
+                                    
+                                    <div class="col-sm-12 col-md-4 media float-left vote">
+                                        <div class="media-body">
+                                             <!--Review-->
+                                            <i class="fa fa-star blue-text "> </i>
+                                            <i class="fa fa-star blue-text "> </i>
+                                            <i class="fa fa-star blue-text "> </i>
+                                            <i class="fa fa-star blue-text "> </i>
+                                            <i class="fa fa-star gray-text "> </i>
+                                            <p>Vote for this word</p>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of word 1 -->
+                        <div class="card-body" id="child2">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="col-sm-12 col-md-8  float-left">
+                                        <a href="#" data-toggle="collapse" data-target="#collapseOneB">Word 2</a>
+                                        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.</p>
+                                    </div>
+                                        
+                                    <div class="col-sm-12 col-md-4 media float-left vote">
+                                        <div class="media-body">
+                                            <!--Review-->
+                                            <i class="fa fa-star blue-text "> </i>
+                                            <i class="fa fa-star blue-text "> </i>
+                                            <i class="fa fa-star gray-text "> </i>
+                                            <i class="fa fa-star gray-text "> </i>
+                                            <i class="fa fa-star gray-text "> </i>
+                                            <p>Vote for this word</p>
+                                                
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of word 2 -->
+                        <div class="card-body" id="child2">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="col-sm-12 col-md-8  float-left">
+                                            <a href="#" data-toggle="collapse" data-target="#collapseOneB">Word 3</a>
+                                            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.</p>
+                                        </div>
+                                            
+                                        <div class="col-sm-12 col-md-4 media float-left vote">
+                                            <div class="media-body">
+                                                <!--Review-->
+                                                <i class="fa fa-star blue-text "> </i>
+                                                <i class="fa fa-star blue-text "> </i>
+                                                <i class="fa fa-star blue-text "> </i>
+                                                <i class="fa fa-star gray-text "> </i>
+                                                <i class="fa fa-star gray-text "> </i>
+                                                <p>Vote for this word</p>
+                                                    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- end of Original word-1 collaps -->
+    
+    
+                </div>
+            
+
+        </div>
+        <!-- end of accordion -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    
+
+</body>
+</html>
